@@ -1,0 +1,72 @@
+.chat-boot {
+    width: 3cm;
+    height: 3cm;
+    position: fixed;
+    right: 10px;
+    /* Adjust as needed */
+    bottom: 10px;
+    /* Adjust as needed */
+    z-index: 1000;
+    /* Ensures it stays on top of other elements */
+    cursor: pointer;
+}
+
+.chat-boot-cancle {
+    width: 2.5cm;
+    height: 2.5cm;
+    position: fixed;
+    right: 10px;
+    /* Adjust as needed */
+    bottom: 10px;
+    /* Adjust as needed */
+    z-index: 1000;
+    /* Ensures it stays on top of other elements */
+    cursor: pointer;
+    display: none;
+}
+.iframe-container {
+    display: none;              /* Hidden by default */
+    position: fixed;
+    bottom: 120px;              /* Adjust for placement */
+    right: 10px;
+    width: 30%;                 /* Width of iframe */
+    height: 450px;              /* Adjust height as needed */
+    z-index: 999;
+    background-image: linear-gradient(rgb(207, 198, 198),rgb(152, 148, 148));
+    border-top-left-radius: 0.2cm;     
+    border-top-right-radius: 1cm;      
+    overflow: hidden;           /* Ensures iframe respects border radius */
+}
+
+/* Iframe styling */
+.iframe-container iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    /* border-top-left-radius: 1cm;      */
+    /* border-top-right-radius: 1cm;       Optional: Adds rounding to the iframe itself */
+}
+
+@media screen and (max-width: 426px) {
+    .chat-boot {
+        width: 2cm;
+        height: 2cm;
+    }
+
+    .chat-boot-cancle {
+        width: 2cm;
+        height: 2cm;
+    }
+    .iframe-container {
+        position: fixed;        /* Fixes the iframe at a position relative to the viewport */
+        bottom: 90px;           /* Position at the bottom of the screen */
+        right: 5px;            /* Position at the right side of the screen */
+        z-index: 9999;          /* High z-index to ensure it stays on top of other elements */
+        width: 8.8cm;
+        height: 13cm;
+        display: none;          /* Initially hidden */
+        border-top-left-radius: 1cm;     
+        border-top-right-radius: 1cm;/* Keeps rounded corners on small screens */
+        overflow: hidden;       /* Ensures iframe respects border radius */
+    }
+}
